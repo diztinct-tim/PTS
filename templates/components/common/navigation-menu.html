@@ -1,0 +1,29 @@
+<nav class="navPages">
+    <div class="navPages-quickSearch mobile-menu-search">
+        {{> components/common/mobile-menu-search-box}}
+    </div>
+    <ul class="navPages-list">
+        {{#each categories}}
+            <li class="navPages-item">
+                {{> components/common/navigation-list}}
+            </li>
+        {{/each}}
+
+        {{#if customer}}
+            <li class="navPages-item account-page">
+                <a class="navPages-action" href="{{urls.auth.logout}}">Log Out</a>
+            </li>
+        {{else}}
+            <li class="navPages-item account-page">
+                <a class="navPages-action login-link" href="{{urls.auth.login}}">Login</a> or <a class="navPages-action" href="{{urls.auth.create_account}}">Register</a>
+            </li>
+            <li class="navPages-item account-page">
+                <a class="navPages-action" href="{{urls.account.index}}">My Account</a>
+            </li>
+            <li class="navPages-item account-page">
+                <a class="navPages-action" href="/contact-us">Contact Us</a>
+            </li>
+        {{/if}}
+
+    </ul>
+</nav>

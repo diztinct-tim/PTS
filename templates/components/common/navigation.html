@@ -1,0 +1,31 @@
+<nav class="navUser">
+    {{> components/common/currency-selector}}
+
+    <ul class="navUser-section navUser-section--alt">
+
+        <li class="navUser-item navUser-item--account">
+            <a class="navUser-action" href="">888.888.8888</a>
+        </li>
+
+        <li class="navUser-item navUser-item--account">
+            <a class="navUser-action" href="">Help</a>
+        </li>
+
+        {{#if settings.account_creation_enabled}}
+            <li class="navUser-item navUser-item--account">
+                {{#if customer}}
+                    <a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
+                    <a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+                {{else}}
+                    <a class="navUser-action" href="{{urls.auth.login}}">Login</a> <span class="navUser-or"> or </span> <a class="navUser-action" href="{{urls.auth.create_account}}">Register</a>
+                {{/if}}
+            </li>
+        {{/if}}
+
+        <li class="navUser-item navUser-item--account">
+            <a class="navUser-action" href="{{urls.account.index}}">My Account</a>
+        </li>
+
+    </ul>
+    
+</nav>

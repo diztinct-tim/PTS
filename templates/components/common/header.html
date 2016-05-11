@@ -1,0 +1,71 @@
+<p class="free-ship-msg small-only"><img width="27px" height="15px" src="{{cdn "webdav:img/free-ship-truck-white.png"}}" alt="Free Shipping Truck"> Free Shipping Over $25</p>
+
+<header class="header" role="banner">
+
+    <div class="head-wrap">
+    
+        <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+            <div class="centered-content">
+                <img src={{cdn "webdav:img/burger.png"}}" height="19px" width="23px" alt="menu icon">
+                <span class="MENU">MENU</span>
+            </div>
+        </a>
+        
+
+        <span class="left-side-angle"></span>
+
+        <a class="logo-link" href="/">
+            <img src="{{cdn 'webdav:img/pts-blue-logo.png' }}" alt="Power Tool Superstore Logo">
+        </a>
+
+        <p class="free-ship-msg medium-up"><img width="27px" height="15px" src="{{cdn "webdav:img/desk-truck.png"}}" alt="Free Shipping Truck"> Free Shipping Over $25</p>
+
+        {{> components/common/navigation}}
+
+        <span class="right-side-angle"></span>
+
+        <a class="mobile-cart" href="/cart">
+            <span>{{cart.quantity}}</span>
+            <img src="{{cdn 'webdav:img/black-cart.png' }}" width="25px" height="21px" alt="">
+            <p>CART</p>
+        </a>
+
+        <div class="medium-up search-cart">
+            <div class="desk-head-search">
+                {{> components/common/desktop-header-search-box}}
+            </div>
+            <div class="desk-cart">
+                <ul>
+                    <li class="navUser-item navUser-item--cart">
+                        <a
+                            class="navUser-action"
+                            data-cart-preview
+                            data-dropdown="cart-preview-dropdown"
+                            data-options="align:right"
+                            href="{{urls.cart}}">
+                            <span class="navUser-item-cartLabel"><img height="22px" width="19px" src="{{cdn "webdav:img/desk-cart-icon.png"}}" alt="">Cart</span> <span class="countPill countPill--positive cart-quantity">({{cart.quantity}})</span>
+                        </a>
+
+                        <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+                    </li>
+                </ul>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navPages-container" id="menu" data-menu>
+        <div class="head-wrap">
+            {{> components/common/navigation-menu}}
+        </div>
+    </div>
+
+
+
+</header>
+
+<div class="promo-banner">
+    <p>15% off Black + Decker Replacement Parts <a href="">SHOP NOW</a></p>
+</div>
+
+

@@ -1,0 +1,12 @@
+{
+  "normalStoreUrl": "https://store-p3ubwr6cgq.mybigcommerce.com",
+  "port": 3000,
+  "username": "Stencil",
+  "token": "2a2659a17c792a6c6f1e582087d24ae5f46d3201",
+  "customLayouts": {
+    "products": {},
+    "search": {},
+    "brands": {},
+    "categories": {}
+  }
+}

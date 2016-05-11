@@ -1,0 +1,173 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+    recent_posts:
+        limit: {{theme_settings.homepage_blog_posts_count}}
+---
+
+{{#partial "page"}}
+
+<div class="home main full">
+
+    <div class="main-banner-search cf">
+
+        <div class="left-brand-area">
+            <h5>Parts From Your Favorite Brands</h5>
+            <ul>
+                <li><a href=""><img src="{{ cdn "webdav:img/black-decker-color.png"}}" alt=""></a></li>
+                <li><a href=""><img src="{{ cdn "webdav:img/stan-bostitch-color.png"}}" alt=""></a></li>
+                <li><a href=""><img src="{{ cdn "webdav:img/dewalt-color.png"}}" alt=""></a></li>
+                <li><a href=""><img src="{{ cdn "webdav:img/porter-cable-color.png"}}" alt=""></a></li>
+            </ul>
+        </div>
+    
+        <div class="start-here">
+            <h4>Start your search here!</h4>
+            <p>Search over 10,000 Power Tool Parts & Accessories.</p>
+
+            {{> components/common/main-search-box}}           
+
+        </div>
+
+    </div>
+
+    <div class="why-shop">
+        <ul>
+            <li class="hidden-mobile">
+                <img src="{{cdn "webdav:img/why-shipping.png"}}" alt="">
+                <h4>FREE SHIPPING</h4>
+                <p>All regular and sale priced items ship for free.</p>
+                <a href="">Learn More</a>
+            </li>
+            <li>
+                <img src="{{cdn "webdav:img/why-save.png"}}" alt="">
+                <h4>SUPER SAVINGS</h4>
+                <p>Why buy new when you can fix your old tool and save.</p>
+                <a href="">Learn More</a>
+            </li>
+            <li>
+                <img src="{{cdn "webdav:img/why-experts.png"}}" alt="">
+                <h4>EXPERT HELP</h4>
+                <p>For the experts, by the experts. We are standing by to help you.</p>
+                <a href="">Learn More</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sub-banner cf">
+
+        <a href="">
+            <img src="{{cdn "webdav:img/sub-banner-1.jpg"}}" alt="">
+        </a>
+        <a href="">
+            <img src="{{cdn "webdav:img/sub-banner-2.jpg"}}" alt="">
+        </a>
+        
+    </div>
+
+    <div class="featured-categories cf">
+
+        <h4>Featured Categories</h4>
+        <p>Power tool parts from Dewalt, Bostitch, Porter Cable & Black + Decker.</p>
+
+        <div class="cat-list">
+            <div class="top">
+                <a href="">
+                    <img src="{{cdn "webdav:img/blackanddecker-logo.png"}}" alt="">
+                </a>
+            </div>
+            <div class="bottom">
+                <img class="left-cat-img" src="{{cdn "webdav:img/blackanddecker.jpg"}}" alt="">
+                <span class="mobile-only toggle-cats"><span class="open-close">+</span>Black + Decker</span>
+                <ul>
+                    <li><a href="">&#187; Circular Saws</a></li>
+                    <li><a href="">&#187; Power Drills</a></li>
+                    <li><a href="">&#187; Cordless Drills</a></li>
+                    <li><a href="">&#187; Palm Sanders</a></li>
+                    <li><a href="">&#187; Power Sanders</a></li>
+                    <li><a href="">&#187; Jigsaws</a></li>
+                    <li><a href="">&#187; Nail Guns</a></li>
+                    <li><a href="">&#187; All Porter Cable</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cat-list">
+            <div class="top">
+                <a href="">
+                    <img src="{{cdn "webdav:img/dewalt-logo.png"}}" alt="">
+                </a>
+            </div>
+            <div class="bottom">
+                <img class="left-cat-img" src="{{cdn "webdav:img/dewalt.jpg"}}" alt="">
+                <span class="mobile-only toggle-cats"><span class="open-close">+</span>Dewalt</span>
+                <ul>
+                    <li><a href="">&#187; Circular Saws</a></li>
+                    <li><a href="">&#187; Power Drills</a></li>
+                    <li><a href="">&#187; Cordless Drills</a></li>
+                    <li><a href="">&#187; Palm Sanders</a></li>
+                    <li><a href="">&#187; Power Sanders</a></li>
+                    <li><a href="">&#187; Jigsaws</a></li>
+                    <li><a href="">&#187; Nail Guns</a></li>
+                    <li><a href="">&#187; All Porter Cable</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cat-list">
+            <div class="top">
+                <a href="">
+                    <img src="{{cdn "webdav:img/bostitch-logo.png"}}" alt="">
+                </a>
+            </div>
+            <div class="bottom">
+                <img class="left-cat-img" src="{{cdn "webdav:img/bostitch.jpg"}}" alt="">
+                <span class="mobile-only toggle-cats"><span class="open-close">+</span>Bostitch</span>
+                <ul>
+                    <li><a href="">&#187; Circular Saws</a></li>
+                    <li><a href="">&#187; Power Drills</a></li>
+                    <li><a href="">&#187; Cordless Drills</a></li>
+                    <li><a href="">&#187; Palm Sanders</a></li>
+                    <li><a href="">&#187; Power Sanders</a></li>
+                    <li><a href="">&#187; Jigsaws</a></li>
+                    <li><a href="">&#187; Nail Guns</a></li>
+                    <li><a href="">&#187; All Porter Cable</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cat-list">
+            <div class="top">
+                <a href="">
+                    <img src="{{cdn "webdav:img/portercable-logo.png"}}" alt="">
+                </a>
+            </div>
+            <div class="bottom">
+                <img class="left-cat-img" src="{{cdn "webdav:img/portercable.jpg"}}" alt="">
+                <span class="mobile-only toggle-cats"><span class="open-close">+</span>Porter Cable</span>
+                <ul>
+                    <li><a href="">&#187; Circular Saws</a></li>
+                    <li><a href="">&#187; Power Drills</a></li>
+                    <li><a href="">&#187; Cordless Drills</a></li>
+                    <li><a href="">&#187; Palm Sanders</a></li>
+                    <li><a href="">&#187; Power Sanders</a></li>
+                    <li><a href="">&#187; Jigsaws</a></li>
+                    <li><a href="">&#187; Nail Guns</a></li>
+                    <li><a href="">&#187; All Porter Cable</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+{{/partial}}
+{{> layout/base}}

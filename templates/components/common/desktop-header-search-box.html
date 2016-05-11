@@ -1,0 +1,14 @@
+{{{ snippet "forms_search"}}}
+<form class="form"  method="get" action="/search-results/">
+    <fieldset class="form-fieldset">
+        <div class="form-field">
+<!--             <label class="form-label u-hiddenVisually" for="search_query_adv">{{lang 'search.results.form_label'}}</label> -->
+            <div class="form-prefixPostfix">
+                <input class="form-input" id="search_query_adv" name="keywords" value="{{forms.search.query}}" placeholder="What are you looking for?">
+                <input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value="">
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+
