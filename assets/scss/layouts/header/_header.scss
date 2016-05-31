@@ -413,7 +413,8 @@ body .menu-overlay.open-menu {
         border-radius: 0px !important;
         width: 50px !important;
         font-size: 0px;
-        background: transparent url("/content/img/blue-search.png") no-repeat center center;
+        // background: transparent url("/content/img/blue-search.png") no-repeat center center;
+        background: transparent url("../../assets/img/blue-search.png") no-repeat center center;
         border: none !important;
         background-size: 21px 21px;
         position: relative;
@@ -451,7 +452,8 @@ body .menu-overlay.open-menu {
         margin-bottom: 0px;
     }
     header.header{
-        background: url("/content/img/noisy-header-bg.png") repeat-x;
+        // background: url("/content/img/noisy-header-bg.png") repeat-x;
+        background: url("../../assets/img/noisy-header-bg.png") repeat-x;
     }
     span.left-side-angle{
         height: 0px;
@@ -631,7 +633,8 @@ body .menu-overlay.open-menu {
     .medium-up.search-cart .button.button--primary.form-prefixPostfix-button--postfix{
         height:32px;
         border:none !important;
-        background: #fff url("/content/img/black-search.png") no-repeat 22px 22px;
+        // background: #fff url("/content/img/black-search.png") no-repeat 22px 22px;
+        background: #fff url("../../assets/img/black-search.png") no-repeat 22px 22px;
         background-position: center right;
         background-size: 22px 22px;
         margin:5px 15px 0px 0px;
@@ -757,14 +760,14 @@ body .menu-overlay.open-menu {
         display:none;
     }
     ul.navPages-list > li.navPages-item:nth-child(3) > div.navPage-subMenu{
-        left:-70px;
+        left:-90px;
     }
     ul.navPages-list > li.navPages-item:nth-child(4) > div.navPage-subMenu{
-        left:-220px;
+        left:-240px;
     }
     .navPage-subMenu{
         left:-6px;
-        width: 440px;
+        width: 475px;
         padding: 10px 15px 10px 10px !important;
         -webkit-column-count: 2; /* Chrome, Safari, Opera */
         -moz-column-count: 2; /* Firefox */
@@ -904,6 +907,12 @@ body .menu-overlay.open-menu {
     .medium-up.search-cart .form-prefixPostfix {
         box-shadow: inset 0px 7px 3px -7px rgba(0, 0, 0, 0.5);
     }
+    ul.navPages-list > li.navPages-item:nth-child(3) > div.navPage-subMenu{
+        left:-6px;
+    }
+    ul.navPages-list > li.navPages-item:nth-child(4) > div.navPage-subMenu{
+        left:-180px;
+    }
 
 
 
@@ -918,6 +927,17 @@ body .menu-overlay.open-menu {
         display: block;
         position: relative;
     }
+    ul.navPages-list > li.navPages-item:nth-child(4) > div.navPage-subMenu{
+        left:-110px;
+    }
 
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1300px) {
+
+    ul.navPages-list > li.navPages-item:nth-child(4) > div.navPage-subMenu {
+        left: -54px;
+    }
 
 }

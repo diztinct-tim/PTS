@@ -18,7 +18,7 @@ export default class Category extends CatalogPage {
         // console.log(this.context.currentPage);
 
         var pageURL = this.context.currentPage;
-        var pageURL = pageURL.replace(/\//g," ").trim();
+        var pageURL = pageURL.replace(/\//g," ").replace("http:","").replace("power-tool-superstore9.mybigcommerce.com","").replace("powertoolsuperstore.com","").trim();
         var catName = pageURL.substr(0,pageURL.indexOf(' '));
 
         console.log('pageURL = ' + pageURL);
@@ -30,12 +30,24 @@ export default class Category extends CatalogPage {
                 $(".page").addClass("model-list");
                 $(".page").append("<div class='model-catalog'><a href=''><img src='https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/model-no-catalog-05.png'></a></div>");
                 $(".sidebarBlock-heading").text("Select Your Model Number Below:");
+            } else if(catName == "dewalt"){
+                $(".page").addClass("model-list");
+                $(".page").append("<div class='model-catalog'><a href=''><img src='https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/model-no-catalog-05.png'></a></div>");
+                $(".sidebarBlock-heading").text("Select Your Model Number Below:");
+            } else if(catName == "porter-cable"){
+                $(".page").addClass("model-list");
+                $(".page").append("<div class='model-catalog'><a href=''><img src='https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/model-no-catalog-05.png'></a></div>");
+                $(".sidebarBlock-heading").text("Select Your Model Number Below:");
+            } else if(catName == "bostitch"){
+                $(".page").addClass("model-list");
+                $(".page").append("<div class='model-catalog'><a href=''><img src='https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/model-no-catalog-05.png'></a></div>");
+                $(".sidebarBlock-heading").text("Select Your Model Number Below:");
             }
         }
 
         if( $('ul.breadcrumbs li').length == 2 ){
-            // if(pageURL == "black-decker" || pageURL == "dewalt" || pageURL == "porter-cable" || pageURL == "bostitch"){
-            if( pageURL == "black-decker" || pageURL == "porter-cable"){
+            if(pageURL == "black-decker" || pageURL == "dewalt" || pageURL == "porter-cable" || pageURL == "bostitch"){
+            // if( pageURL == "black-decker" || pageURL == "porter-cable"){
                 $(".body").addClass("brand-landing-page");
             }
         }

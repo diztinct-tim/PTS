@@ -45,10 +45,31 @@ export default class Product extends PageManager {
 
         $(".body").addClass("product-page");
 
+        function createCompatabilityList(){
+            var partList = $(".item-compatibility");
+            $(".compatability").append(partList);
+        }
+        function createCompatabilityDeskList(){
+            var partList = $(".item-compatibility");
+            $(".desk-compatability").append(partList);
+        }
+        if( $(window).width() < 1050 ){
+            createCompatabilityList();    
+        } else {
+            createCompatabilityDeskList();
+        }
 
 
-        next();
+            
+        
+             
+
+
+
+
+    next();
     }
+    // }
 
     loaded(next) {
         let validator;
@@ -81,8 +102,22 @@ export default class Product extends PageManager {
             $(this).toggleClass('open-tog');
             $(this).next('div').slideToggle();
         });
+        $('.compatability.pp-toggle > h3').on('click', function(){
+            $('.item-compatibility').slideToggle();
+        });
 
-        $(".item-compatability").appendTo(".desk-compatability > div > p");
+        $('.item-compatibility > h3').on('click', function(){
+            if( $(this).hasClass('open-tog') ){
+                $(this).removeClass('open-tog');
+                $(this).next('ul').removeClass('show-me');    
+            } else {
+                $('.item-compatibility ul.show-me').removeClass('show-me');
+                $('.item-compatibility h3.open-tog').removeClass('open-tog');
+                $(this).toggleClass('open-tog');
+                $(this).next('ul').toggleClass('show-me');
+            }
+        });
+
 
 
 

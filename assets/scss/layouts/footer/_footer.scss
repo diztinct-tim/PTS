@@ -538,6 +538,9 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .info > .right-half{
         padding: 30px 15px;
     }
+    .right-half > p{
+        margin-top:0px;
+    }
 
 
 
@@ -568,7 +571,7 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
 
 
     .info > .right-half{
-        padding: 30px 20px;
+        padding: 30px 15px;
     }
     .one-third.first > .info{
         padding-left:20px;
@@ -587,6 +590,9 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
 
     footer.footer > .container {
         max-width: 1280px;
+    }
+    .info > .right-half{
+        padding: 30px 20px;
     }
 
 

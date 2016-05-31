@@ -91,7 +91,8 @@ body{
         margin-top: 1px;
         display: block;
         padding: 20px;
-        background-image: url("/content/img/mob-main-bg.jpg");
+        // background-image: url("/content/img/mob-main-bg.jpg");
+        background-image: url("../../assets/img/mob-main-bg.jpg");
         background-size: cover;
         background-position: center bottom;
     }
@@ -117,10 +118,10 @@ body{
         display: inline-block !important;
         flex: none;
         width:100%;
-        background: #fff;
+        background: #f6f6f6;
         height:60px;
         border:1px solid #dadada;
-        box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: inset -2px 2px 2px rgba(0, 0, 0, 0.2);
     }
     .start-here #search_query_adv {
         border-radius: 0px;
@@ -135,6 +136,7 @@ body{
         margin-top: 8px;
         margin-left: 8px;
         padding: 2px 15px 5px;
+        background-color:#f6f6f6;
     }
     .start-here .button.button--primary.form-prefixPostfix-button--postfix {
         border-radius: 0px;
@@ -150,6 +152,26 @@ body{
         font-size:16px;
         margin-top: 2px;
         text-decoration: underline;
+    }
+    #search_query_adv::-webkit-input-placeholder {
+       color: #767676;
+       font-style:italic;
+       opacity:1;
+    }
+    #search_query_adv:-moz-placeholder { /* Firefox 18- */
+       color: #767676;
+       font-style:italic;
+       opacity:1;
+    }
+    #search_query_adv::-moz-placeholder {  /* Firefox 19+ */
+       color: #767676;
+       font-style:italic;
+       opacity:1;
+    }
+    #search_query_adv:-ms-input-placeholder {  
+       color: #767676;
+       font-style:italic;
+       opacity:1;
     }
     .why-shop ul img{
         display:none;
@@ -372,7 +394,8 @@ body{
         display: inline-block;
         height: 25px;
         width: 60px;
-        background: url('/content/img/dewalt-color.png');
+        // background: url('/content/img/dewalt-color.png');
+        background: url('../../assets/img/dewalt-color.png');
         background-size: 60px 25px;
         background-position: top left;
         margin-bottom: 5px;
@@ -381,7 +404,8 @@ body{
         display: inline-block;
         height: 25px;
         width: 60px;
-        background: url('/content/img/stan-bostitch-color.png');
+        // background: url('/content/img/stan-bostitch-color.png');
+        background: url('../../assets/img/stan-bostitch-color.png');
         background-size: 60px 25px;
         background-position: top left;
         margin-bottom: 5px;
@@ -390,7 +414,8 @@ body{
         display: inline-block;
         height: 25px;
         width: 60px;
-        background: url('/content/img/black-decker-color.png');
+        // background: url('/content/img/black-decker-color.png');
+        background: url('../../assets/img/black-decker-color.png');
         background-size: 60px 25px;
         background-position: top left;
         margin-bottom: 5px;
@@ -399,7 +424,8 @@ body{
         display: inline-block;
         height: 25px;
         width: 60px;
-        background: url('/content/img/porter-cable-color.png');
+        // background: url('/content/img/porter-cable-color.png');
+        background: url('../../assets/img/porter-cable-color.png');
         background-size: 60px 25px;
         background-position: top left;
         margin-bottom: 5px;
@@ -410,6 +436,8 @@ body{
         color:#000;
         font-weight:700;
         line-height:26px;
+        display: block;
+        clear: both;
     }
     .productView-price .price-section.price-section--withoutTax .price.price--withoutTax{
         font-size:24px;
@@ -654,6 +682,36 @@ body{
     .bottom-why-shop{
         display:none;
     }
+    span.left-side-angle::after {
+        content: "";
+        display: inline-block;
+        position: absolute !important;
+        width: 1px !important;
+        background: #b3b3b3 !important;
+        height: 71px !important;
+        z-index: 9;
+        -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+        transform: rotate(8deg);
+        top: -33px;
+        -webkit-backface-visibility: hidden;
+        outline:1px solid transparent;
+    }
+    span.right-side-angle::before {
+        content: "";
+        display: inline-block;
+        position: absolute !important;
+        width: 1px !important;
+        background: #b3b3b3 !important;
+        height: 71px !important;
+        z-index: 9;
+        -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+        transform: rotate(8deg);
+        top: -38px;
+        -webkit-backface-visibility: hidden;
+        outline:1px solid transparent;
+    }
     
 
 
@@ -821,6 +879,7 @@ body{
     // CATEGORY LANDING 2
     .page.model-list{
         position:relative;
+        min-height: 250px;
     }
     .page.model-list aside.page-sidebar {
         width: 75%;
@@ -832,6 +891,7 @@ body{
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
+        display: block !important;
     }
     .page.model-list .model-catalog{
         display:none;
@@ -1003,6 +1063,65 @@ body{
         font-family: "Acumin Pro";
         font-weight: 700;
     }
+    .item-compatibility h3{
+        color:#000;
+        width:auto !important;
+        float:none;
+        font-size:16px !important;
+    }
+    .item-compatibility > ul > li{
+        list-style:none;
+    }
+    .item-compatibility > h3{
+        position:relative;
+        cursor:pointer;
+        margin-left:20px;
+        line-height:24px !important;
+    }
+    .item-compatibility > h3::before{
+        content: "+";
+        height: 16px;
+        width: 16px;
+        color: #999;
+        margin-left: 0;
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+        font-size: 24px;
+        font-style: normal !important;
+        font-weight: 400;
+        font-family: "helvetica";
+        line-height: 14px;
+        position: absolute;
+        left: -20px;
+        top: 4px;
+        transition: all 0.25s ease;
+    }
+    .item-compatibility > h3.open-tog::before {
+        color: #1586c7;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left:-20px;
+        top: 4px;
+        transition: all 0.25s ease;
+    }
+    .item-compatibility > ul{
+        display:none;
+        margin-left:20px;
+    }
+    .body.product-page {
+        margin-bottom: 40px !important;
+    }
+    .item-compatibility > ul.show-me{
+        display:block;
+        margin-left:20px;
+    }
+    .compatability.pp-toggle .item-compatibility {
+        padding-top: 0px !important;
+        margin-top: -20px;
+    }
+
     
 
 
@@ -1065,7 +1184,8 @@ body{
 @media only screen and (min-width : 768px) {
 
     .main-banner-search{
-        background:url("/content/img/main-bg-no-shade.jpg");
+        // background:url("/content/img/main-bg-no-shade.jpg");
+        background:url("../../assets/img/main-bg-no-shade.jpg");
     }
     .hidden-mobile{
         display:inline-block !important;
@@ -1154,7 +1274,8 @@ body{
     .cat-list > .top{
         text-align: center;
         display: block;
-        background: url("/content/img/noisy-header-bg.png") repeat-x;
+        // background: url("/content/img/noisy-header-bg.png") repeat-x;
+        background: url("../../assets/img/noisy-header-bg.png") repeat-x;
         min-height: 105px;
     }
     .featured-categories ul{
@@ -1353,7 +1474,8 @@ body{
         display: inline-block;
         height: 40px;
         width: 100px;
-        background: url('/content/img/dewalt-color.png');
+        // background: url('/content/img/dewalt-color.png');
+        background: url('../../assets/img/dewalt-color.png');
         background-size: 100px 40px;
         background-position: top left;
         margin-bottom: 5px;
@@ -1362,16 +1484,18 @@ body{
         display: inline-block;
         height: 40px;
         width: 100px;
-        background: url('/content/img/stan-bostitch-color.png');
+        // background: url('/content/img/stan-bostitch-color.png');
+        background: url('../../assets/img/stan-bostitch-color.png');
         background-size: 100px 40px;
         background-position: top left;
         margin-bottom: 5px;
     }
-    .brand-bg.Black&Decker {
+    .brand-bg.Black.Decker {
         display: inline-block;
         height: 40px;
         width: 100px;
-        background: url('/content/img/black-decker-color.png');
+        // background: url('/content/img/black-decker-color.png');
+        background: url('../../assets/img/black-decker-color.png');
         background-size: 100px 40px;
         background-position: top left;
         margin-bottom: 5px;
@@ -1380,7 +1504,8 @@ body{
         display: inline-block;
         height: 40px;
         width: 100px;
-        background: url('/content/img/porter-cable-color.png');
+        // background: url('/content/img/porter-cable-color.png');
+        background: url('../../assets/img/porter-cable-color.png');
         background-size: 100px 40px;
         background-position: top left;
         margin-bottom: 5px;
@@ -1488,7 +1613,8 @@ body{
         margin-right:10px;
         display:inline-block;
         width:calc(33% - 8px);
-        background: url("/content/img/noisy-header-bg.png") repeat;
+        // background: url("/content/img/noisy-header-bg.png") repeat;
+        background: url("../../assets/img/noisy-header-bg.png") repeat;
         padding: 30px 12px 40px;
         vertical-align: top;
     }
@@ -1607,6 +1733,24 @@ body{
         padding-left: 20px;
         font-family: "Acumin Pro";
         font-weight: 700;
+    }
+    .start-here .form-field{
+        position:relative;
+    }
+    .start-here .form-field::before {
+        content: "";
+        background: url("../../assets/img/banner-input-slant.png");
+        display: inline-block;
+        background-size: 18px 70px;
+        height: 70px;
+        width: 18px;
+        position: absolute;
+        top: 0px;
+        left: -15px;
+        background-repeat: no-repeat;
+    }
+    .page.model-list {
+        min-height: 400px;
     }
 
 
@@ -1909,7 +2053,7 @@ body{
         text-indent:0px;
     }
     .navPage-subMenu{
-        width:420px;
+        width:510px;
         padding:20px !important;
     }
     ul.navPages-list li.navPages-item ul.navPage-subMenu-list > li.navPage-subMenu-item > a {

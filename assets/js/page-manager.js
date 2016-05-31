@@ -41,8 +41,7 @@ export default class PageManager {
                 scrollTop:0
             }, 1000);
             return false;
-        })
-
+        });
 
 
     }
