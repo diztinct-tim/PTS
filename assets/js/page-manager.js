@@ -17,14 +17,14 @@ export default class PageManager {
 
 
         if( $(window).width() <= 767 ){
-            $(".start-here .button.button--primary.form-prefixPostfix-button--postfix").attr("value","GO");
+            $(".start-here .button.button--primary.form-prefixPostfix-button--postfix").attr("value","");
         } else {
             $(".start-here .button.button--primary.form-prefixPostfix-button--postfix").attr("value","SEARCH");
         }
 
         $( window ).resize(function() {
           if( $(window).width() <= 767 ){
-            $(".start-here .button.button--primary.form-prefixPostfix-button--postfix").attr("value","GO");
+            $(".start-here .button.button--primary.form-prefixPostfix-button--postfix").attr("value","");
           } else {
             $(".start-here .button.button--primary.form-prefixPostfix-button--postfix").attr("value","SEARCH");
           }

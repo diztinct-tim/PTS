@@ -5,7 +5,16 @@
         <ul class="navList">
             {{#each category.subcategories}}
             <li class="navList-item">
-                <a class="navList-action" href="{{url}}" alt="{{name}}">{{name}}</a>
+                <a class="navList-action" href="{{url}}" alt="{{name}}">
+                    <span class="image-area">
+                        {{#if image}}
+                            <img class="cat-thumb-img" src="{{getImage image 'thumb'}}">
+                        {{else}}
+                            <span class="brand-img"></span>
+                        {{/if}}
+                    </span>
+                {{name}}
+                </a>
             </li>
             {{/each}}
         </ul>

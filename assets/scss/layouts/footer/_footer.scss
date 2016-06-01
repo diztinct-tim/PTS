@@ -147,7 +147,7 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
         width:100%;
         padding:0px;
     }
-    .one-third.first > .info {
+    .one-third.third > .info {
         background: #003553;
         text-align:center;
         position:relative;
@@ -155,7 +155,7 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .footer-info{
         margin:0px !important;
     }
-    .one-third.first > .info > .left-half > img {
+    .one-third.third > .info > .left-half > img {
         text-align:center;
         max-width: 120px;
     }
@@ -188,7 +188,7 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .social > h4{
         display:none;
     }
-    .one-third.first > .social {
+    .one-third.third > .social {
         background: #003553;
         padding: 0px 20px 20px;
     }
@@ -233,10 +233,10 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
         font-weight:500;
     }
     .one-third.second {
-        padding: 30px 20px;
+        padding: 10px 20px 30px;
     }
-    .one-third.third {
-        padding: 0px 20px;
+    .one-third.first {
+        padding: 30px 20px 10px;
     }
     .footer-info-heading{
         margin-top:0px;
@@ -246,13 +246,13 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
         font-size:16px;
         font-weight:700;
     }
-    .one-third.third > p {
+    .one-third.first > p {
         font-family:$acumin;
         font-size: 14px;
         color: #fff;
         margin-bottom:10px;
     }
-    #nl_email{
+    .footer #nl_email{
         width:calc(100% - 85px);
         display:inline-block;
         vertical-align:top;
@@ -261,7 +261,7 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
         background:transparent;
         border:none;
     }
-    .button.button--primary.form-prefixPostfix-button--postfix{
+    .footer .button.button--primary.form-prefixPostfix-button--postfix{
         width:85px;
         height:38px;
         display:inline-block;
@@ -297,7 +297,7 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .payment-copyright > div.container ul > li > img{
         width:50px;
     }
-    .one-third.third .form-prefixPostfix.wrap{
+    .one-third.first .form-prefixPostfix.wrap{
         border: 1px solid #dadada;
         box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.3);
         background:#fff;
@@ -345,6 +345,9 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .back-to-top.small-only{
         display:block;
     }
+    .footer .form-field{
+        margin-bottom:0px;
+    }
 
 
 
@@ -357,7 +360,7 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
 
-    .one-third.first > .info > .left-half > img {
+    .one-third.third > .info > .left-half > img {
         max-width: 150px;
     }
 
@@ -373,13 +376,14 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .one-third.second > div{
         width:50%;
     }
-    .one-third.third {
-        padding: 30px 20px 30px 0px;
+    .one-third.first {
+        padding: 30px 20px 30px 20px;
         display: inline-block;
-        width: 45%;
+        width: 50%;
+        background:transparent;
     }
     .one-third.second {
-        width: 55%;
+        width: 50%;
         display: inline-block;
         padding: 30px 0px 30px 20px;
         vertical-align: top;
@@ -389,20 +393,18 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
         font-family: $acumin;
         font-weight:700;
     }
-    .one-third.first > .info, .one-third.first > .social{
+    .one-third.third > .info, .one-third.first > .social{
         width:50%;
         vertical-align:top;
         display:inline-block;
-    }
-    .one-third.first{
-        background: #003553;
     }
     .social > ul{
         margin-left:0px;
         text-align:right;
     }
-    .one-third.first > .social{
+    .one-third.third > .social{
         padding-top: 40px;
+        display:inline-block;
     }
     .payment-copyright .container span.mobile-break {
         display: block;
@@ -436,6 +438,9 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .back-to-top.small-only{
         display:none;
     }
+    .one-third.third{
+        background: #003553;
+    }
 
 
 
@@ -455,7 +460,7 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
         display: inline-block;
         color:#fff;
     }
-    .one-third.first, .one-third.first > .social {
+    .one-third.third, .one-third.third > .social {
         background: transparent;
     }
     .one-third {
@@ -463,26 +468,24 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
         width: calc(33% - 0px) !important;
         vertical-align: top;
     }
-    .one-third.first{
-        margin-left:20px;
-        margin-top:40px;
-    }
-    .one-third.first > .info, .one-third.first > .social {
+    .one-third.third > .info, .one-third.third > .social {
         width: 100%;
     }
-    .one-third.third{
-        width:calc(33% - 40px) !important;
+    .one-third.third {
+        width: calc(33% - 12px) !important;
+        margin-top:40px;
+        margin-right: 20px;
     }
-    .button.button--primary.form-prefixPostfix-button--postfix{
+    .footer .button.button--primary.form-prefixPostfix-button--postfix{
         margin-left:0px;
     }
     .social > ul {
         text-align: center;
     }
-    .one-third.first > .info > .left-half > img {
+    .one-third.third > .info > .left-half > img {
         max-width: 100%;
     }
-    .one-third.first > .social {
+    .one-third.third > .social {
         padding-top: 20px;
     }
     .social > h4{
@@ -492,19 +495,19 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
         font-size:16px;
         vertical-align: top;
     }
-    .one-third.first > .social{
+    .one-third.third > .social{
         padding:20px 0px;
     }
     .social > ul{
         display:inline-block;
         vertical-align: top;
         margin-top: 10px;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     .one-third.second > div > ul > li {
         line-height: 28px;
     }
-    .one-third.third > p{
+    .one-third.first > p{
         margin-bottom:15px;
         margin-top:15px;
     }
@@ -514,32 +517,61 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .right-half > p {
         font-size: 14px;
     }
-    #nl_email {
+    .footer #nl_email {
         width: calc(100% - 86px);
     }
-    .one-third.third .form-prefixPostfix.wrap{
+    .one-third.first .form-prefixPostfix.wrap{
         display:inline-block;
         width: 100%;
     }
-    .one-third.first > .info::before {
-        width: 25px;
-        height: 110%;
-        content: "";
-        position: absolute;
-        background: #004972;
-        left: -14px;
-        top: -7%;
-        transform: rotate(12deg);
-    }
-    .one-third.first > .info{
-        padding-left:9px;
+    .one-third.third > .info{
+        padding-left:0px;
         margin-left:0px
     }
     .info > .right-half{
-        padding: 30px 15px;
+        padding: 26px 15px;
     }
     .right-half > p{
         margin-top:0px;
+    }
+    .payment-copyright > div.container > p{
+        display: block;
+        text-align: center;
+    }
+    .payment-copyright ul {
+        display:inline-block;
+    }
+    .payment-copyright .container span.mobile-break {
+        display: inline;
+    }
+    .payment-copyright > div.container ul > li > img {
+        width: 65px;
+        margin-right: 10px;
+    }
+    .payment-copyright ul {
+        margin-left: 0px;
+    }
+    .payment-copyright > div.container {
+        text-align: center;
+    }
+    .back-to-top{
+        float:none;
+        margin-left:20px;
+        display:inline-block;
+    }
+    .cat-list > .bottom::before {
+        top:-29px;
+        border-top: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #ddd;
+        border-left: 15px solid transparent;
+    }
+    .cat-list > .bottom::after {
+        top:-28px;
+        border-top: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #fff;
+        border-left: 15px solid transparent;
     }
 
 
@@ -559,9 +591,6 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
     .right-half > p {
         font-size: 16px;
     }
-    .one-third.first > .info{
-        padding-left:10px;
-    }
 
 }
 
@@ -572,9 +601,6 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
 
     .info > .right-half{
         padding: 30px 15px;
-    }
-    .one-third.first > .info{
-        padding-left:20px;
     }
     div.info > div.left-half::after{
         left: calc(50% + 6px);
@@ -600,20 +626,24 @@ $industry: "Industry", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
 
 @media only screen and (min-width : 1300px) {
 
-    .one-third.first {
-        margin-left: 0px;
-        width: 33% !important;
+    .one-third.third {
+        margin-right: 0px;
+        padding-right:0px;
+        width: 33.333% !important;
     }
     .one-third.second{
         padding-left:40px;
-        width: 33% !important;
+        width: 33.333% !important;
     }
-    .one-third.third{
-        padding-right:0px;
-        width: 33% !important;
+    .one-third.first{
+        padding-left:0px;
+        width: 33.333% !important;
     }
     div.info > div.left-half::after{
         left: calc(50% + 12px);
+    }
+    .one-third.third > .social{
+        text-align:center;
     }
 
 }

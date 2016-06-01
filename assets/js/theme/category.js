@@ -25,23 +25,41 @@ export default class Category extends CatalogPage {
         console.log('catName = ' + catName);
         console.log($('ul.breadcrumbs li').length);
 
+        var catImg = $(".cat-img").attr("src");
+
         if( $('ul.breadcrumbs li').length == 3 ){
             if(catName == "black-decker"){
                 $(".page").addClass("model-list");
-                $(".page").append("<div class='model-catalog'><a href=''><img src='https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/model-no-catalog-05.png'></a></div>");
+                $(".cat-img").hide();
+                $(".page").append("<div class='model-wrap'><div class='model-catalog' data-reveal-id='myModal'><a href='#'><img class='i-img' src='https://store-p3ubwr6cgq.mybigcommerce.com/product_images/uploaded_images/i-img.jpg'><span>Where is my model number?</span><img class='popup-click' src=" + catImg + "></a><span class='click-larger'>Click to view larger</span></div></div>");
                 $(".sidebarBlock-heading").text("Select Your Model Number Below:");
+                $(".brand-img").each(function(){
+                    $(this).addClass(catName);
+                });
             } else if(catName == "dewalt"){
                 $(".page").addClass("model-list");
-                $(".page").append("<div class='model-catalog'><a href=''><img src='https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/model-no-catalog-05.png'></a></div>");
+                $(".cat-img").hide();
+                $(".page").append("<div class='model-wrap'><div class='model-catalog' data-reveal-id='myModal'><a href='#'><img class='i-img' src='https://store-p3ubwr6cgq.mybigcommerce.com/product_images/uploaded_images/i-img.jpg'><span>Where is my model number?</span><img class='popup-click' src=" + catImg + "></a><span class='click-larger'>Click to view larger</span></div></div>");
                 $(".sidebarBlock-heading").text("Select Your Model Number Below:");
+                $(".brand-img").each(function(){
+                    $(this).addClass(catName);
+                });
             } else if(catName == "porter-cable"){
                 $(".page").addClass("model-list");
-                $(".page").append("<div class='model-catalog'><a href=''><img src='https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/model-no-catalog-05.png'></a></div>");
+                $(".cat-img").hide();
+                $(".page").append("<div class='model-wrap'><div class='model-catalog' data-reveal-id='myModal'><a href='#'><img class='i-img' src='https://store-p3ubwr6cgq.mybigcommerce.com/product_images/uploaded_images/i-img.jpg'><span>Where is my model number?</span><img class='popup-click' src=" + catImg + "></a><span class='click-larger'>Click to view larger</span></div></div>");
                 $(".sidebarBlock-heading").text("Select Your Model Number Below:");
+                $(".brand-img").each(function(){
+                    $(this).addClass(catName);
+                });
             } else if(catName == "bostitch"){
                 $(".page").addClass("model-list");
-                $(".page").append("<div class='model-catalog'><a href=''><img src='https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/model-no-catalog-05.png'></a></div>");
+                $(".cat-img").hide();
+                $(".page").append("<div class='model-wrap'><div class='model-catalog' data-reveal-id='myModal'><a href='#'><img class='i-img' src='https://store-p3ubwr6cgq.mybigcommerce.com/product_images/uploaded_images/i-img.jpg'><span>Where is my model number?</span><img class='popup-click' src=" + catImg + "></a><span class='click-larger'>Click to view larger</span></div></div>");
                 $(".sidebarBlock-heading").text("Select Your Model Number Below:");
+                $(".brand-img").each(function(){
+                    $(this).addClass(catName);
+                });                
             }
         }
 
@@ -58,6 +76,15 @@ export default class Category extends CatalogPage {
             }, 1000);
             return false;
         })
+
+        $(".model-catalog").on("click", function(e){
+            e.preventDefault();
+            var imgPopup = $(this).find(".popup-click").attr("src");
+            console.log(imgPopup);
+            $(".popup-src").attr("src", imgPopup );
+        })
+
+        $(".landing-search #search_query_adv").attr("placeholder","Search by model");
 
 
 

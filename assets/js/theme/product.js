@@ -45,19 +45,19 @@ export default class Product extends PageManager {
 
         $(".body").addClass("product-page");
 
-        function createCompatabilityList(){
-            var partList = $(".item-compatibility");
-            $(".compatability").append(partList);
-        }
-        function createCompatabilityDeskList(){
-            var partList = $(".item-compatibility");
-            $(".desk-compatability").append(partList);
-        }
-        if( $(window).width() < 1050 ){
-            createCompatabilityList();    
-        } else {
-            createCompatabilityDeskList();
-        }
+        // function createCompatabilityDeskList(){
+        //     var partList = $(".item-compatibility").clone();
+        //     $(".desk-compatability").append(partList);
+        //     $(".compatability").append(partList);
+        // }
+        // createCompatabilityDeskList();
+
+        var the_clone = $(".item-compatibility").clone().addClass('cloned');
+        var clone_one = the_clone.clone().addClass('clone-one');
+        var clone_two = the_clone.clone().addClass('clone-two');
+        $(".desk-compatability").append(clone_one);
+        $(".compatability").append(clone_two);
+        
 
 
             

@@ -6,29 +6,7 @@
 
             <div class="one-third first">
 
-                <div class="info">
-
-                    <div class="left-half">
-                        <img src="{{cdn "webdav:img/pts-white-logo.png"}}" alt="">
-                    </div>
-
-                    <div class="right-half">
-                        <a href="">(800) 888-888</a>
-                        <p>M-F 9am - 5pm EST</p>
-                    </div>
-
-                </div>
-
-                <div class="social">
-                    <h4>Connect With Us</h4>
-                    <ul>
-                        <li><a href=""><img src="{{cdn "webdav:img/facebook.png"}}" alt=""></a></li>
-                        <li><a href=""><img src="{{cdn "webdav:img/twitter.png"}}" alt=""></a></li>
-                        <li><a href=""><img src="{{cdn "webdav:img/googleplus.png"}}" alt=""></a></li>
-                        <li><a href=""><img src="{{cdn "webdav:img/blog.png"}}" alt=""></a></li>
-                    </ul>
-
-                </div>
+                {{> components/common/subscription-form}}
 
             </div>
 
@@ -38,10 +16,10 @@
                 
                     <h4>Company Info</h4>
                     <ul>
-                        <li><a href="/about-us">About Us</a></li>
-                        <li><a href="/about-us">Contact Us</a></li>
-                        <li><a href="/warranty">Warranty</a></li>
-                        <li><a href="/shipping-returns">Shipping & Returns</a></li>
+                        <li><a href="/about-us/">About Us</a></li>
+                        <li><a href="/contact-us/">Contact Us</a></li>
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/shipping-returns/">Shipping & Returns</a></li>
                     </ul>
 
                 </div>
@@ -62,7 +40,29 @@
 
             <div class="one-third third">
 
-                    {{> components/common/subscription-form}}
+                    <div class="info">
+
+                    <div class="left-half">
+                        <img src="https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/footer-white-logo-06.png" alt="">
+                    </div>
+
+                    <div class="right-half">
+                        <a href="mailto:customerservice@powertoolsuperstore.com">Email Us</a>
+                        <p>M-F 9am - 5pm EST</p>
+                    </div>
+
+                </div>
+
+                <div class="social">
+                    <h4>Connect With Us</h4>
+                    <ul>
+                        <li><a href=""><img src="{{cdn "webdav:img/facebook.png"}}" alt=""></a></li>
+                        <li><a href=""><img src="{{cdn "webdav:img/twitter.png"}}" alt=""></a></li>
+                        <li><a href=""><img src="{{cdn "webdav:img/googleplus.png"}}" alt=""></a></li>
+                        <li><a href=""><img src="{{cdn "webdav:img/blog.png"}}" alt=""></a></li>
+                    </ul>
+
+                </div>
 
             </div>
 
@@ -71,7 +71,7 @@
 
     <div class="payment-copyright">
         <div class="container">
-            <p>Copyright © 2016 PowertoolSuperstore.com <span class="mobile-break"></span><a href="https://www.diztinct.com/bigcommerce-design.html" target="_blank">Custom Bigcommerce Design</a> by Diztinct.com</p>
+            <p class="small-only">Copyright © 2016 PowertoolSuperstore.com <span class="mobile-break"></span><a href="https://www.diztinct.com/bigcommerce-design.html" target="_blank">Custom Bigcommerce Design</a> by Diztinct.com</p>
             <ul>
                 <li><img src="{{cdn "webdav:img/payment-icon-1.png"}}" alt=""></li>
                 <li><img src="{{cdn "webdav:img/payment-icon-2.png"}}" alt=""></li>
@@ -84,6 +84,8 @@
                 <span class="up">&#187;</span>
                 <p>Back to Top</p>
             </div>
+
+            <p class="medium-up">Copyright © 2016 PowertoolSuperstore.com </span><a href="https://www.diztinct.com/bigcommerce-design.html" target="_blank">Custom Bigcommerce Design</a> by Diztinct.com</p>
 
         </div>
 

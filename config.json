@@ -77,6 +77,10 @@
         "width": 190,
         "height": 250
       },
+      "popup": {
+        "width": 800,
+        "height": 800
+      },
       "zoom": {
         "width": 1280,
         "height": 1280
