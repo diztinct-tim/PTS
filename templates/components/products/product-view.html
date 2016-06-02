@@ -46,6 +46,35 @@
 
                     <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
 
+                    <div class="productView-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                        {{#if settings.show_product_rating}}
+                            {{#if product.num_reviews '>' 0}}
+                                <meta itemprop="ratingValue" content="{{product.rating}}">
+                                <meta itemprop="ratingCount" content="{{product.num_reviews}}">
+                                <meta itemprop="reviewCount" content="{{product.num_reviews}}">
+                            {{/if}}
+                            {{> components/products/ratings rating=product.rating}}
+                            <span class="productView-reviewLink">
+                                {{#if product.num_reviews '>' 0}}
+                                    <a href="{{product.url}}#product-reviews">
+                                        {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
+                                    </a>
+                                {{else}}
+                                    {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
+                                {{/if}}
+                            </span>
+                        {{/if}}
+                        {{#if settings.show_product_reviews}}
+                            <span class="productView-reviewLink">
+                                <a href="{{product.url}}{{#if is_ajax}}#writeReview{{/if}}"
+                                   {{#unless is_ajax }}data-reveal-id="modal-review-form"{{/unless}}>
+                                   {{lang 'products.reviews.new'}}
+                                </a>
+                            </span>
+                            {{> components/products/modals/writeReview}}
+                        {{/if}}
+                    </div>
+
                     <div class="desk-compatability">
                         <h3>Compatibility</h3>
                         <div></div>
@@ -56,6 +85,8 @@
                             {{> components/products/price price=product.price schema_org=schema}}
                         </div>
                     {{/if}}
+
+
                    
                     {{product.detail_messages}}
                     <dl class="productView-info">
@@ -323,6 +354,7 @@
     <div class="customer-reviews pp-toggle">
         <h3>Customer Reviews</h3>
         {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+
     </div>
 
 

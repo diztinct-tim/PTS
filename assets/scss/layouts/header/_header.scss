@@ -516,6 +516,49 @@ body .menu-overlay.open-menu {
         position:fixed;
         width: 100%;
     }
+    .navPages-action.has-subMenu{
+        position:relative;
+    }
+    .navPages-action.has-subMenu:before{
+        content:"";
+        height: 0px;
+        width: 0px;
+        margin-left: 0;
+        line-height: 14px;
+        position: absolute;
+        left: 22px;
+        top: 23px;
+        border:5px solid transparent;
+        border-top-color:#999;
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+        // -webkit-transition:  all 0.25s ease;
+        // -moz-transition:     all 0.25s ease;
+        // -o-transition:       all 0.25s ease;
+        // -ms-transition:      all 0.25s ease;
+        // transition:          all 0.25s ease;
+    }
+    .navPages-action.has-subMenu.is-open:before {
+        content:"";
+        height: 0px;
+        width: 0px;
+        margin-left: 0;
+        line-height: 14px;
+        position: absolute;
+        left: 22px;
+        top: 18px;
+        border:5px solid transparent;
+        border-top-color:#1586c7;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        // -webkit-transition:  all 0.25s ease;
+        // -moz-transition:     all 0.25s ease;
+        // -o-transition:       all 0.25s ease;
+        // -ms-transition:      all 0.25s ease;
+        // transition:          all 0.25s ease;
+    }
 
 
 
@@ -904,6 +947,42 @@ body .menu-overlay.open-menu {
     .previewCartAction {
         padding: 0px 10px;
     }
+
+    .previewCart {
+        position: relative;
+    }
+    .previewCart:before {
+        content:"";
+        height:0px;
+        width:0px;
+        display:inline-block;
+        border-top:12px solid transparent;
+        border-right:12px solid transparent;
+        border-bottom:12px solid #f2f2f2;
+        border-left:12px solid transparent;
+        position:absolute;
+        top:-22px;
+        right:45px;
+        z-index:9;
+    }
+    .previewCart:after {
+        content:"";
+        height:0px;
+        width:0px;
+        display:inline-block;
+        border-top:12px solid transparent;
+        border-right:12px solid transparent;
+        border-bottom:12px solid #ccc;
+        border-left:12px solid transparent;
+        position:absolute;
+        top:-23px;
+        right:45px;
+        z-index:8;
+    }
+    .navPages-action.has-subMenu::before{
+        border:none !important;
+    }
+
 
 
 

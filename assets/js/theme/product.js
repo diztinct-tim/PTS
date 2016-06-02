@@ -36,6 +36,10 @@ export default class Product extends PageManager {
             $(".description.pp-toggle > div").css("display","block");
         }
 
+        $(".customer-reviews > h3").on("click", function(){
+            $("#product-reviews").slideToggle();
+        });
+
         $(".back-to-top").on("click", function(){
             $("body,html").animate({
                 scrollTop:0
@@ -59,6 +63,19 @@ export default class Product extends PageManager {
         $(".compatability").append(clone_two);
         
 
+        $(".productView-reviewLink").on("click", function(e){
+            e.preventDefault();
+
+            $(".customer-reviews.pp-toggle > h3").addClass("open-tog");
+            $("#product-reviews").css("display","block");
+            var scrollTo = $("#product-reviews").offset().top;
+            console.log(scrollTo);
+
+            $("body,html").animate({
+                scrollTop: scrollTo
+            }, 500);
+            return false;
+        });
 
             
         

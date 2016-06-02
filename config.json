@@ -1,6 +1,6 @@
 {
   "name": "PTS",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "meta": {
     "price": 0,
     "documentation_url": "https://support.bigcommerce.com/articles/Public/Cornerstone-Theme-Manual",
@@ -53,6 +53,7 @@
     "brandpage_products_per_page": 12,
     "searchpage_products_per_page": 12,
     "show_product_quick_view": true,
+    "show_product_reviews": true,
     "show_powered_by": true,
     "show_accept_amex": false,
     "show_accept_discover": false,
