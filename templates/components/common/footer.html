@@ -2,11 +2,21 @@
 
     <div class="container">
         <section class="footer-info">
-            
 
             <div class="one-third first">
 
-                {{> components/common/subscription-form}}
+                <h4>My Account</h4>
+                <ul>
+                    <li><a href="/account.php">My Account</a></li>
+                    <li><a href="/cart.php">Shopping Cart</a></li>
+                    {{#if customer}}
+                        <li><a href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a></li>
+                    {{else}}
+                        <li><a href="{{urls.auth.login}}">Login</a> <span> or </span> <a href="{{urls.auth.create_account}}">Register</a></li>
+                    {{/if}}
+                    <li><a href="/">Order Status</a></li>
+                    
+                </ul>
 
             </div>
 
@@ -40,18 +50,7 @@
 
             <div class="one-third third">
 
-                    <div class="info">
-
-                    <div class="left-half">
-                        <img src="https://cdn3.bigcommerce.com/s-p3ubwr6cgq/product_images/uploaded_images/footer-white-logo-06.png" alt="">
-                    </div>
-
-                    <div class="right-half">
-                        <a href="mailto:customerservice@powertoolsuperstore.com">Email Us</a>
-                        <p>M-F 9am - 5pm EST</p>
-                    </div>
-
-                </div>
+                {{> components/common/subscription-form}}
 
                 <div class="social">
                     <h4>Connect With Us</h4>

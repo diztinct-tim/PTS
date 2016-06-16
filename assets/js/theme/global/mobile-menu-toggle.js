@@ -30,6 +30,8 @@ export class MobileMenuToggle {
     } = {}) {
         this.$overlay = $('.menu-overlay');
         this.$body = $('body');
+        this.$mainbody = $('.body');
+        this.$promobanner = $('.promo-banner');
         this.$menu = $(menuSelector);
         this.$header = $(headerSelector);
         this.$scrollView = $(scrollViewSelector, this.$menu);
@@ -88,6 +90,9 @@ export class MobileMenuToggle {
 
         this.$overlay.addClass('open-menu');
 
+        this.$mainbody.addClass('open-menu');
+        this.$promobanner.addClass('open-menu');
+
         this.$toggle
             .addClass('is-open')
             .attr('aria-expanded', true);
@@ -114,6 +119,9 @@ export class MobileMenuToggle {
         this.$header.removeClass('is-open');
 
         this.$overlay.removeClass('open-menu');
+
+        this.$mainbody.removeClass('open-menu');
+        this.$promobanner.removeClass('open-menu');
     }
 
     // Private

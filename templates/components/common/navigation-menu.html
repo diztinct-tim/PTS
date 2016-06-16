@@ -11,6 +11,18 @@
 
         {{#if customer}}
             <li class="navPages-item account-page">
+                <a class="navPages-action" href="{{urls.account.index}}">My Account</a>
+            </li>
+            <li class="navPages-item account-page">
+                <a class="navPages-action" href="{{urls.account.index}}">Order Status</a>
+            </li>
+            <li class="navPages-item account-page">
+                <a class="navPages-action" href="/about-us/">About Us</a>
+            </li>
+            <li class="navPages-item account-page">
+                <a class="navPages-action" href="/contact-us">Contact Us</a>
+            </li>
+            <li class="navPages-item account-page">
                 <a class="navPages-action" href="{{urls.auth.logout}}">Log Out</a>
             </li>
         {{else}}
@@ -19,6 +31,12 @@
             </li>
             <li class="navPages-item account-page">
                 <a class="navPages-action" href="{{urls.account.index}}">My Account</a>
+            </li>
+            <li class="navPages-item account-page">
+                <a class="navPages-action" href="{{urls.account.index}}">Order Status</a>
+            </li>
+            <li class="navPages-item account-page">
+                <a class="navPages-action" href="/about-us/">About Us</a>
             </li>
             <li class="navPages-item account-page">
                 <a class="navPages-action" href="/contact-us">Contact Us</a>

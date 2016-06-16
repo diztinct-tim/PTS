@@ -105,7 +105,6 @@ export default class Category extends CatalogPage {
 
         if( $('ul.breadcrumbs li').length == 2 ){
             if(pageURL == "black-decker" || pageURL == "dewalt" || pageURL == "porter-cable" || pageURL == "bostitch"){
-            // if( pageURL == "black-decker" || pageURL == "porter-cable"){
                 $(".body").addClass("brand-landing-page");
             }
         }
@@ -124,13 +123,11 @@ export default class Category extends CatalogPage {
             $(".popup-src").attr("src", imgPopup );
         })
 
-        $(".landing-search #search_query_adv").attr("placeholder","Search by model");
-
-
-
-
-
-
+        if( $(window).width() < 768){
+            $(".landing-search #search_query_adv").attr("placeholder","Search By Model #");
+        } else {
+            $(".landing-search #search_query_adv").attr("placeholder","Search By Model Number");
+        }
 
     }
 

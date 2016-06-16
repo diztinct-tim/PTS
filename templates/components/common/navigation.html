@@ -3,28 +3,18 @@
 
     <ul class="navUser-section navUser-section--alt">
 
-        <!-- <li class="navUser-item navUser-item--account">
-            <a class="navUser-action" href="">888.888.8888</a>
-        </li> -->
-
         <li class="navUser-item navUser-item--account">
             <a class="navUser-action" href="/contact-us/">Help</a>
         </li>
 
-        {{#if settings.account_creation_enabled}}
+        {{#if customer}}
+            <li class="navUser-item navUser-item--account"><a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a></li>
+            <li class="navUser-item navUser-item--account"><a class="navUser-action" href="{{urls.auth.logout}}"></a></li>{{lang 'common.logout'}}</a>
+        {{else}}
             <li class="navUser-item navUser-item--account">
-                {{#if customer}}
-                    <a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
-                    <a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
-                {{else}}
-                    <a class="navUser-action" href="{{urls.auth.login}}">Login</a> <span class="navUser-or"> or </span> <a class="navUser-action" href="{{urls.auth.create_account}}">Register</a>
-                {{/if}}
+                <a class="navUser-action" href="{{urls.auth.login}}">Login</a> <span class="navUser-or"> or </span> <a class="navUser-action" href="{{urls.auth.create_account}}">Register</a>
             </li>
         {{/if}}
-
-        <li class="navUser-item navUser-item--account">
-            <a class="navUser-action" href="{{urls.account.index}}">My Account</a>
-        </li>
 
     </ul>
     
